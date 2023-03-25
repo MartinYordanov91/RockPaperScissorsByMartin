@@ -1,60 +1,88 @@
-            const string Rock = "Rock";
-            const string Paper = "Paper";
-            const string Scissors = "Scissors";
+using System;
 
-            Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
-            string playerMove = Console.ReadLine();
+namespace RockPaperScissors
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            while (count < 3)
+            {
 
-            if (playerMove == "r" || playerMove == "rock")
-            {
-                playerMove = Rock;
-            }
-            else if (playerMove == "p" || playerMove == "paper")
-            {
-                playerMove = Paper;
-            }
-            else if (playerMove == "s" || playerMove == "scissors")
-            {
-                playerMove = Scissors;
-            }
-            else
-            {
-                Console.WriteLine("Invalid Input. Try Again...");
-                return;
-            }
-            Random random = new Random();
-            int computersRandomNumber = random.Next(1, 4);
 
-            string computerMove = " ";
+                const string Rock = "Rock";
+                const string Paper = "Paper";
+                const string Scissors = "Scissors";
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
+                string playerMove = Console.ReadLine();
 
-            switch (computersRandomNumber)
-            {
-                case 1:
-                    computerMove = Rock;
-                    break;
-                case 2:
-                    computerMove = Paper;
-                    break;
-                case 3:
-                    computerMove = Scissors;
-                    break;
+                if (playerMove == "r" || playerMove == "rock")
+                {
+                    playerMove = Rock;
+                }
+                else if (playerMove == "p" || playerMove == "paper")
+                {
+                    playerMove = Paper;
+                }
+                else if (playerMove == "s" || playerMove == "scissors")
+                {
+                    playerMove = Scissors;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid Input. Try Again...");
+                    Console.WriteLine();
+                    count++;
+                    continue;
+                }
+                Random random = new Random();
+                int computersRandomNumber = random.Next(1, 4);
 
-            }
-            Console.WriteLine($"The computer chose {computerMove}.");
+                string computerMove = " ";
 
-            if (playerMove == Rock && computerMove == Scissors ||
-                playerMove == Scissors && computerMove == Paper ||
-                playerMove == Paper && computerMove == Rock)
-            {
-                Console.WriteLine("You win.");
+                switch (computersRandomNumber)
+                {
+                    case 1:
+                        computerMove = Rock;
+                        break;
+                    case 2:
+                        computerMove = Paper;
+                        break;
+                    case 3:
+                        computerMove = Scissors;
+                        break;
+
+                }
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"The computer chose {computerMove}.");
+
+                if (playerMove == Rock && computerMove == Scissors ||
+                    playerMove == Scissors && computerMove == Paper ||
+                    playerMove == Paper && computerMove == Rock)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("You win.");
+                }
+                else if (playerMove == Rock && computerMove == Paper ||
+                         playerMove == Scissors && computerMove == Rock ||
+                         playerMove == Paper && computerMove == Scissors)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You lose.");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("This game was a draw.");
+                }
+                Console.WriteLine();
             }
-            else if (playerMove == Rock && computerMove == Paper ||
-                     playerMove == Scissors && computerMove == Rock ||
-                     playerMove == Paper && computerMove == Scissors)
-            {
-                Console.WriteLine("You lose.");
-            }
-            else
-            {
-                Console.WriteLine("This game was a draw.");
-            }
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Too many wrong choices !!!");
+
+        }
+    }
+}
