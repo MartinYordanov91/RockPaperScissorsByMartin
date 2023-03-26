@@ -15,7 +15,7 @@ Is a game for two, in case you meet a computer.The player has a choice between R
 ## Your move could be:
  > 'r' or "rock" for  -->  Rock.\
  > 's' or "scissors" for  -->  Scissors.\
- > 'p' or "paper" for  -->  Paper.\
+ > 'p' or "paper" for  -->  Paper.
 
  |  You     | Computer | Result   | 
  | :---:    | :------: | :----:   |
@@ -31,4 +31,4 @@ Is a game for two, in case you meet a computer.The player has a choice between R
 
  > ## Link to the my Source Code:
  >
- >> [Source Code](RockPaperScissors.cs)
+ >> [Source Code](https://github.com/MartinYordanov91/RockPaperScissorsByMartin/blob/main/code/RockPaperScissors.cs)
