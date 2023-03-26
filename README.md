@@ -33,4 +33,4 @@ Is a game for two, in case you meet a computer.The player has a choice between R
  >
  >> [Source Code](https://github.com/MartinYordanov91/RockPaperScissorsByMartin/blob/main/code/RockPaperScissors.cs)
 
- image.png
+![image](https://user-images.githubusercontent.com/124835928/227801058-734fd54a-d4c1-49c0-ba82-d26099cd741e.png)
