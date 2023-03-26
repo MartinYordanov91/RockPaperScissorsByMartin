@@ -13,9 +13,9 @@ Is a game for two, in case you meet a computer.The player has a choice between R
  . **Paper** is stronger than **Rock**
 
 ## Your move could be:
- 'r' or "rock" for Rock.
- 's' or "scissors" for Scissors.
- 'p' or "paper" for Paper
+ > 'r' or "rock" for  -->  Rock.\
+ > 's' or "scissors" for  -->  Scissors.\
+ > 'p' or "paper" for  -->  Paper.\
 
  |  You     | Computer | Result   | 
  | :---:    | :------: | :----:   |
@@ -28,3 +28,7 @@ Is a game for two, in case you meet a computer.The player has a choice between R
  | paper    | rock     | You win  |
  | paper    | scissors | You lose |
  | paper    | paper    | Draw     |
+
+ > ## Link to the my Source Code:
+ >
+ >> [Source Code](RockPaperScissors.cs)
